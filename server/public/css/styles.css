@@ -1,5 +1,5 @@
 body {
-    background-image: url('fondo.png'); /* Asegura que la imagen de fondo se adapte */
+    background-image: url('../fondo.png'); /* Asegura que la imagen de fondo se adapte */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el fondo */
